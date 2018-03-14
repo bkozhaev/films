@@ -3,9 +3,10 @@
 require_relative '../lib/film.rb'
 
 describe 'Film.rb' do
-  before(:all) do
+  before do
     @film = Film.from_path(__dir__ + "/fixtures/01.txt")
   end
+
   it 'return data from txt file ' do
     expect(@film.name).to eq('Список Шиндлера')
     expect(@film.director).to eq('Стивен Спилберг')
